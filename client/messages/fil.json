@@ -8,6 +8,11 @@
     "signOut": "Mag-sign out",
     "loading": "Naglo-load…"
   },
+  "Catalog": {
+    "title": "Mga Kurso",
+    "empty": "Wala pang nailathalang kurso. Bumalik ka mamaya.",
+    "browse": "Tingnan ang mga kurso"
+  },
   "Teacher": {
     "dashboardTitle": "Dashboard ng guro",
     "uploadTitle": "Mag-upload at bumuo ng kurso",

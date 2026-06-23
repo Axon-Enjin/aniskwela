@@ -8,6 +8,11 @@
     "signOut": "Sign out",
     "loading": "Loading…"
   },
+  "Catalog": {
+    "title": "Courses",
+    "empty": "No published courses yet. Check back soon.",
+    "browse": "Browse courses"
+  },
   "Teacher": {
     "dashboardTitle": "Teacher dashboard",
     "uploadTitle": "Upload & generate a course",

@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
+  // Cache Components: enables the explicit, opt-in `'use cache'` directive
+  // (AGENTS.md guardrail — no implicit fetch caching).
+  cacheComponents: true,
   // Low-resource constraint (AGENTS.md): keep first-load JS small.
   // Images must be served as small WebP (<= 80KB) — enforced in review, not here.
   images: {

@@ -15,7 +15,13 @@ export default async function Home() {
       <section className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold tracking-tight">{t("appName")}</h1>
         <p className="text-lg text-gray-700">{t("tagline")}</p>
-        <div>
+        <div className="flex gap-3">
+          <Link
+            href="/courses"
+            className="inline-block rounded border border-gray-300 px-5 py-2.5 hover:bg-gray-100"
+          >
+            Browse courses
+          </Link>
           <Link
             href="/teacher"
             className="inline-block rounded bg-gray-900 px-5 py-2.5 text-white hover:bg-gray-800"

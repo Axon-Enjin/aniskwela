@@ -6,8 +6,9 @@ import { generateCourse, CourseGenerationError } from "@/lib/ai/course-gen";
 import { persistDraftCourse } from "@/lib/courses/persist";
 import { quizCount as countQuiz, lessonCount as countLessons } from "@/lib/ai/course-schema";
 
-export const runtime = "nodejs";
 // Generation is a bounded synchronous call; allow more time than a normal route.
+// (runtime defaults to nodejs; an explicit `runtime` export is incompatible
+// with cacheComponents.)
 export const maxDuration = 120;
 
 const FieldsSchema = z.object({
