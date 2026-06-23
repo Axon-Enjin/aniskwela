@@ -1,0 +1,28 @@
+# FMD is a separate tool with its own git repository and remote — not part of the Gaia repo.
+FMD/
+
+# Dependencies / build output (once the app is scaffolded)
+node_modules/
+.next/
+dist/
+build/
+out/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Intermediates
+.tmp/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Office temp / autosave artifacts
+~$*
+*\[Autosaved\]*
