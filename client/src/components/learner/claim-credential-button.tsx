@@ -80,11 +80,12 @@ export function ClaimCredentialButton({
   const [network, setNetwork] = useState<string | null>(initialNetwork ?? null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  if (existingCredentialId && (initialVerifyUrl || verifyUrl)) {
-    const url = verifyUrl || initialVerifyUrl || "";
+  const resolvedVerifyUrl = verifyUrl || initialVerifyUrl || null;
+
+  if (existingCredentialId && resolvedVerifyUrl) {
     return (
       <CredentialReadyPanel
-        url={url}
+        url={resolvedVerifyUrl}
         qr={qrSrc(initialQrDataUrl ?? undefined, qrBase64 || undefined)}
         network={initialNetwork ?? network}
         labels={labels}
