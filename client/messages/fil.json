@@ -73,6 +73,7 @@
     "fileLabel": "Pinagmulang dokumento (PDF o teksto, ≤ 10MB)",
     "generate": "Bumuo ng draft",
     "generating": "Binubuo ang draft… isang beses lang ito kada kurso.",
+    "preprocessStat": "Inihanda ang source para sa AI: {raw} chars → {prepared} chars ({pct}% na bawas) bago ang course generation.",
     "draftReady": "Handa na ang draft",
     "draftIndustry": "Industriya: {industry}",
     "lessonsCount": "{count} na aralin",

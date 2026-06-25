@@ -73,6 +73,7 @@
     "fileLabel": "Source document (PDF or text, ≤ 10MB)",
     "generate": "Generate draft",
     "generating": "Generating draft… this runs once per course.",
+    "preprocessStat": "Source prepared for AI: {raw} chars condensed to {prepared} chars ({pct}% reduction) before course generation.",
     "draftReady": "Draft ready",
     "draftIndustry": "Industry: {industry}",
     "lessonsCount": "{count} lessons",
