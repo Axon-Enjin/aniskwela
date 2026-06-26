@@ -3,8 +3,15 @@ import type { User } from "@supabase/supabase-js";
 import { getTranslations } from "next-intl/server";
 import { LandingNav } from "@/components/landing/landing-nav";
 import { HeroSection } from "@/components/landing/hero-section";
-import { JourneySection } from "@/components/landing/journey-section";
 import { TrustBandSection } from "@/components/landing/trust-band-section";
+import { AboutSection } from "@/components/landing/about-section";
+import { HowItWorksSection } from "@/components/landing/how-it-works-section";
+import { DemoShowcaseSection } from "@/components/landing/demo-showcase";
+import { FeaturesSection } from "@/components/landing/features-section";
+import { JourneySection } from "@/components/landing/journey-section";
+import { GrowthLadderSection } from "@/components/landing/growth-ladder-section";
+import { MockupsSection } from "@/components/landing/mockups-section";
+import { TechStackSection } from "@/components/landing/tech-stack-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { ClosingCtaSection } from "@/components/landing/closing-cta-section";
 import { BrandMark } from "@/components/brand/brand-mark";
@@ -24,15 +31,90 @@ export async function LandingPage({ user, dashboardHref }: LandingPageProps) {
     <div className="weave-bg flex min-h-full flex-col">
       <LandingNav signedIn={!!user} dashboardHref={dashboardHref} />
 
-      <main
-        id="main-content"
-        className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-12 px-6 py-8 sm:gap-14 sm:py-10"
-      >
-        <HeroSection />
-        <JourneySection />
-        <TrustBandSection />
-        <FaqSection />
-        <ClosingCtaSection />
+      <main id="main-content" className="w-full flex-1 flex flex-col">
+        {/* First Viewport Fold: Hero (Built for Filipino Farmers) + Trust Band (Sober Credible Proof) */}
+        <div className="w-full min-h-[calc(100vh-4.5rem)] flex flex-col justify-between border-b border-border-brand/30 bg-bg-brand/20">
+          <div className="flex-1 flex items-center py-8">
+            <div className="mx-auto max-w-5xl w-full px-6">
+              <HeroSection />
+            </div>
+          </div>
+          <div className="bg-surface-brand py-6 border-t border-border-brand/30">
+            <div className="mx-auto max-w-5xl w-full px-6">
+              <TrustBandSection />
+            </div>
+          </div>
+        </div>
+
+        {/* Section 3: About */}
+        <div className="w-full py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <AboutSection />
+          </div>
+        </div>
+
+        {/* Section 4: How It Works */}
+        <div className="w-full bg-surface-brand/60 py-16 sm:py-24 border-y border-border-brand/20">
+          <div className="mx-auto max-w-5xl px-6">
+            <HowItWorksSection />
+          </div>
+        </div>
+
+        {/* Section 5: Demo Showcase */}
+        <div className="w-full py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <DemoShowcaseSection />
+          </div>
+        </div>
+
+        {/* Section 6: Features */}
+        <div className="w-full bg-surface-brand/45 py-16 sm:py-24 border-y border-border-brand/20">
+          <div className="mx-auto max-w-5xl px-6">
+            <FeaturesSection />
+          </div>
+        </div>
+
+        {/* Section 7: Journey */}
+        <div className="w-full py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <JourneySection />
+          </div>
+        </div>
+
+        {/* Section 8: Growth Ladder */}
+        <div className="w-full bg-surface-brand/40 py-16 sm:py-24 border-y border-border-brand/20">
+          <div className="mx-auto max-w-5xl px-6">
+            <GrowthLadderSection />
+          </div>
+        </div>
+
+        {/* Section 9: Mockups */}
+        <div className="w-full py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <MockupsSection />
+          </div>
+        </div>
+
+        {/* Section 10: Tech Stack */}
+        <div className="w-full bg-surface-brand/50 py-16 sm:py-24 border-y border-border-brand/20">
+          <div className="mx-auto max-w-5xl px-6">
+            <TechStackSection />
+          </div>
+        </div>
+
+        {/* Section 11: FAQ */}
+        <div className="w-full py-16 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <FaqSection />
+          </div>
+        </div>
+
+        {/* Section 12: Closing CTA & Waitlist */}
+        <div className="w-full bg-surface-brand/40 py-16 sm:py-24 border-t border-border-brand/20">
+          <div className="mx-auto max-w-5xl px-6">
+            <ClosingCtaSection />
+          </div>
+        </div>
       </main>
 
       <footer className="mt-auto border-t border-border-brand bg-surface-brand/80">
